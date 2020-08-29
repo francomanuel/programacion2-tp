@@ -1,0 +1,36 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apellido",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dni",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "cc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "limite",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20200825213849",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "cliente",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "pagination"
+}
