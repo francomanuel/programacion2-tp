@@ -74,7 +74,7 @@ public class ClienteService {
     }
 
 	public boolean checkBelonging(Long id, String cc) {
-		return (clienteRepository.findByidAndCc()).isPresent();
+		return (clienteRepository.findByidAndCc(id, cc)).isPresent();
 	}
 
 	public boolean validateAmount(Long id, int amount) {

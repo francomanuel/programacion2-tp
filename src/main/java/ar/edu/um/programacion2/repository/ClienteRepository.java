@@ -14,5 +14,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
-	public Optional<Cliente> findByidAndCc();
+	public Optional<Cliente> findByidAndCc(Long id, String cc);
 }
