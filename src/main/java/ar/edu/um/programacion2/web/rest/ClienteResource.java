@@ -123,8 +123,9 @@ public class ClienteResource {
         return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, false, ENTITY_NAME, id.toString())).build();
     }
     
+    
     @GetMapping("/clientes/{id}/checkcc/{cc}")
-    public ResponseEntity<Boolean> validateCc(@PathVariable Long id, @PathVariable String cc) {
+    public ResponseEntity<Boolean> validateCc(@PathVariable Long id, @PathVariable Long cc) {
     	return ResponseEntity.ok().body(clienteService.checkBelonging(id, cc));
     }
     
@@ -132,4 +133,6 @@ public class ClienteResource {
     public ResponseEntity<Boolean> validateAmount(@PathVariable Long id, @PathVariable int amount) {
     	return ResponseEntity.ok().body(clienteService.validateAmount(id, amount));
     }
+    
+    
 }

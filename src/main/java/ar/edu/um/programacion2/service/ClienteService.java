@@ -73,10 +73,10 @@ public class ClienteService {
         clienteRepository.deleteById(id);
     }
 
-	public boolean checkBelonging(Long id, String cc) {
+	public boolean checkBelonging(Long id, Long cc) {
 		return (clienteRepository.findByidAndCc(id, cc)).isPresent();
 	}
-
+	
 	public boolean validateAmount(Long id, int amount) {
 		Optional<Cliente> cliente = clienteRepository.findById(id);
 		if(cliente.get().getLimite() >= amount)

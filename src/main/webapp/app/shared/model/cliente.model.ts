@@ -3,7 +3,7 @@ export interface ICliente {
   nombre?: string;
   apellido?: string;
   dni?: number;
-  cc?: string;
+  cc?: number;
   limite?: number;
 }
 
@@ -13,7 +13,7 @@ export class Cliente implements ICliente {
     public nombre?: string,
     public apellido?: string,
     public dni?: number,
-    public cc?: string,
+    public cc?: number,
     public limite?: number
   ) {}
 }

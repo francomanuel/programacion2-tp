@@ -39,8 +39,8 @@ public class ClienteResourceIT {
     private static final Long DEFAULT_DNI = 1L;
     private static final Long UPDATED_DNI = 2L;
 
-    private static final String DEFAULT_CC = "AAAAAAAAAA";
-    private static final String UPDATED_CC = "BBBBBBBBBB";
+    private static final Long DEFAULT_CC = 1L;
+    private static final Long UPDATED_CC = 2L;
 
     private static final Integer DEFAULT_LIMITE = 1;
     private static final Integer UPDATED_LIMITE = 2;
@@ -150,7 +150,7 @@ public class ClienteResourceIT {
             .andExpect(jsonPath("$.[*].nombre").value(hasItem(DEFAULT_NOMBRE)))
             .andExpect(jsonPath("$.[*].apellido").value(hasItem(DEFAULT_APELLIDO)))
             .andExpect(jsonPath("$.[*].dni").value(hasItem(DEFAULT_DNI.intValue())))
-            .andExpect(jsonPath("$.[*].cc").value(hasItem(DEFAULT_CC)))
+            .andExpect(jsonPath("$.[*].cc").value(hasItem(DEFAULT_CC.intValue())))
             .andExpect(jsonPath("$.[*].limite").value(hasItem(DEFAULT_LIMITE)));
     }
     
@@ -168,7 +168,7 @@ public class ClienteResourceIT {
             .andExpect(jsonPath("$.nombre").value(DEFAULT_NOMBRE))
             .andExpect(jsonPath("$.apellido").value(DEFAULT_APELLIDO))
             .andExpect(jsonPath("$.dni").value(DEFAULT_DNI.intValue()))
-            .andExpect(jsonPath("$.cc").value(DEFAULT_CC))
+            .andExpect(jsonPath("$.cc").value(DEFAULT_CC.intValue()))
             .andExpect(jsonPath("$.limite").value(DEFAULT_LIMITE));
     }
     @Test

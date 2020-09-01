@@ -17,7 +17,7 @@
     },
     {
       "fieldName": "cc",
-      "fieldType": "String"
+      "fieldType": "Long"
     },
     {
       "fieldName": "limite",

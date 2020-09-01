@@ -3,8 +3,6 @@ package ar.edu.um.programacion2.domain;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import lombok.Data;
-
 import javax.persistence.*;
 
 import java.io.Serializable;
@@ -15,7 +13,6 @@ import java.io.Serializable;
 @Entity
 @Table(name = "cliente")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-@Data
 public class Cliente implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -34,7 +31,7 @@ public class Cliente implements Serializable {
     private Long dni;
 
     @Column(name = "cc")
-    private String cc;
+    private Long cc;
 
     @Column(name = "limite")
     private Integer limite;
@@ -87,16 +84,16 @@ public class Cliente implements Serializable {
         this.dni = dni;
     }
 
-    public String getCc() {
+    public Long getCc() {
         return cc;
     }
 
-    public Cliente cc(String cc) {
+    public Cliente cc(Long cc) {
         this.cc = cc;
         return this;
     }
 
-    public void setCc(String cc) {
+    public void setCc(Long cc) {
         this.cc = cc;
     }
 
@@ -138,7 +135,7 @@ public class Cliente implements Serializable {
             ", nombre='" + getNombre() + "'" +
             ", apellido='" + getApellido() + "'" +
             ", dni=" + getDni() +
-            ", cc='" + getCc() + "'" +
+            ", cc=" + getCc() +
             ", limite=" + getLimite() +
             "}";
     }

@@ -13,6 +13,5 @@ import org.springframework.stereotype.Repository;
 @SuppressWarnings("unused")
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
-
-	public Optional<Cliente> findByidAndCc(Long id, String cc);
+	public Optional<Cliente> findByidAndCc(Long id, Long cc);
 }
